@@ -1,0 +1,11 @@
+# ninja log v6
+12	764	7547867143194297	CMakeFiles/pro.dir/sauvergarde.c.obj	1bf9995f35f71b68
+4	794	7547867143109231	CMakeFiles/pro.dir/main.c.obj	b891f3ee3528b9dd
+811	890	7547867151176460	pro.exe	cfb33361bfa2488c
+9	766	7547867143154300	CMakeFiles/pro.dir/interface.c.obj	173f11a0caaf2852
+7	811	7547867143134280	CMakeFiles/pro.dir/jeu.c.obj	6ee026682e984094
+42	2263	7551335374401233	CMakeFiles/pro.dir/interface.c.obj	53b4eb9edc33e80c
+50	2266	7551335374480923	CMakeFiles/pro.dir/sauvergarde.c.obj	1c6699e805d8fba2
+35	2293	7551335374330132	CMakeFiles/pro.dir/jeu.c.obj	b312c5f23016c6a9
+7	2351	7551335374054292	CMakeFiles/pro.dir/main.c.obj	d963138275fc5445
+2351	2705	7551335397493281	pro.exe	817ae89390675688

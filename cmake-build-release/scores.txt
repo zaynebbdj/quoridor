@@ -1,0 +1,3 @@
+SCORES_QUORIDOR
+1
+joueur1 5
