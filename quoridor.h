@@ -18,6 +18,7 @@ typedef struct {
     char nom[MAX_NOM];
     int x, y;
     int objectif;
+    int objectifx;
     int barrieres;
     char pion;
     int couleur;

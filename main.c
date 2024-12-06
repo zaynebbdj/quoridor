@@ -72,9 +72,26 @@ int main() {
                 for (int i = 0; i < nbJoueurs; i++) {
                     joueurs[i].x = positions[i][0];
                     joueurs[i].y = positions[i][1];
-                    joueurs[i].objectif = (i % 2 == 0) ? 8 : 0;
                     plateau.cases[positions[i][1]][positions[i][0]] = joueurs[i].pion;
+                    switch (i) {
+                        case 0:
+                            joueurs[i].objectif = 8;
+                        break;
+                        case 1:
+                            joueurs[i].objectif = 0;
+                        break;
+                        case 2:
+                            joueurs[i].objectifx = 8;
+                        printf("initialisation de %d\n ", joueurs[i].objectifx);
+                        break;
+                        case 3:
+                            joueurs[i].objectifx = 0;
+                        break;
+                        default:
+                            break;
+                    }
                 }
+
                 //affichage début de jeu (qui joue en premier, nom et pion)
                 printf("\nOrdre des joueurs tire au hasard :\n");
                 for (int i = 0; i < nbJoueurs; i++) {
@@ -155,7 +172,31 @@ int main() {
                         memcpy(etatActuel.joueurs, joueurs, sizeof(joueurs));
 
                         //On vérifie si le déplacement a permis au joueur de gagner
-                        if (joueurs[joueurActuel].y == joueurs[joueurActuel].objectif) {
+                        int i = joueurActuel;
+                        bool gagne = false;
+                        switch (i) {
+                            case 0:
+                                gagne = (joueurs[joueurActuel].y == joueurs[joueurActuel].objectif);
+                            printf("%d == %d\n", joueurs[joueurActuel].y, joueurs[joueurActuel].objectif);
+
+                            break;
+                            case 1:
+                                gagne = (joueurs[joueurActuel].y == joueurs[joueurActuel].objectif);
+                            printf("%d == %d\n", joueurs[joueurActuel].y, joueurs[joueurActuel].objectif);
+
+                            break;
+                            case 2:
+                                gagne = (joueurs[joueurActuel].x == joueurs[joueurActuel].objectifx);
+                            printf("%d == %d\n", joueurs[joueurActuel].x, joueurs[joueurActuel].objectifx);
+
+                            break;
+                            case 3:
+                                gagne = (joueurs[joueurActuel].x == joueurs[joueurActuel].objectifx);
+                            break;
+                            default:
+                                break;
+                        }
+                        if (gagne) {
                             AffPlateau(&plateau, joueurs, nbJoueurs);
                             Color(10, 0);
                             printf("\nFELICITATIONS ! %s a gagne !\n", joueurs[joueurActuel].nom);
@@ -241,3 +282,4 @@ int main() {
 
     return 0;
 }
+

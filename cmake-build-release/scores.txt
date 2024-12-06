@@ -1,3 +1,9 @@
 SCORES_QUORIDOR
-1
-joueur1 5
+7
+joueur1 10
+joueur2 5
+zaya 5
+j2 5
+j4 5
+j1 5
+J3 5

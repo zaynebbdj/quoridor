@@ -102,6 +102,7 @@ void AffAide() {
 
 //fonction pour initialiser les joueurs
 void InitJoueurs(Joueur joueurs[], int nbJoueurs, Plateau *plateau) {
+    printf("initialisation desjoueurs\n");
     int barrieresInitiales = (nbJoueurs == 2) ? 10 : 5;
     int positions[4][2] = {
         {4, 0},  // Joueur 1
@@ -109,12 +110,12 @@ void InitJoueurs(Joueur joueurs[], int nbJoueurs, Plateau *plateau) {
         {0, 4},  // Joueur 3
         {8, 4}   // Joueur 4
     };
+    printf("nombre de joueur : %d\n", nbJoueurs);
     for (int i = 0; i < nbJoueurs; i++) {
         snprintf(joueurs[i].nom, MAX_NOM, "Joueur %d", i + 1);
         joueurs[i].x = positions[i][0];
         joueurs[i].y = positions[i][1];
         joueurs[i].barrieres = barrieresInitiales;
-        joueurs[i].objectif = (i % 2 == 0) ? 8 : 0;
         plateau->cases[joueurs[i].y][joueurs[i].x] = 'P' + i;
     }
 }
